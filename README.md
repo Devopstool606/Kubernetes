@@ -248,3 +248,38 @@ Balances traffic across multiple Pods.
 Supports different access types (ClusterIP, NodePort, LoadBalancer).
 
 ![image](https://github.com/user-attachments/assets/e80813be-2e72-4583-b8c9-8ca8ea804304)
+
+1. Installation of minkube
+   ---------------
+
+1. Install dependies:
+
+       sudo apt update && sudo apt upgrade -y
+       sudo apt install -y curl wget apt-transport-https conntrack
+
+2. Install minikube:
+   ================
+
+       curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+       sudo install minikube-linux-amd64 /usr/local/bin/minikube
+3. Check the version
+   ===================
+
+       minikube version
+
+
+Installation of kubectl
+=======================
+
+1. Update the dependies
+    ---------------------
+   
+        sudo apt update && sudo apt upgrade -y
+# 2. Install kubectl
+
+        curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+        sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+# 3 Verify installation
+
+        kubectl version --client

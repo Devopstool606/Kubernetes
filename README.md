@@ -140,6 +140,22 @@ If you want to delete the deployment and service:
     kubectl delete deployment my-nginx
     kubectl delete service my-nginx
 
+
+# Note: The Docker driver should not be used with root privileges
+
+1. Create the user
+
+        adduser yourusername
+   
+3. add the user to the docker group
+   
+
+        usermod -aG docker ubuntu
+   
+4. Switch to the new user
+
+         su - yourusername
+
 Different Objects in the Kubernets
 =========================================
 

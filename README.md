@@ -286,6 +286,20 @@ Installation of kubectl
 
 #  Kubernetes Installation Using KOPS on EC2
 
+# What is Kops?
+
+Kops (Kubernetes Operations) is a tool used to create, manage, and upgrade production-grade Kubernetes clusters in the cloud (mainly AWS).
+
+🔹 Why Use Kops?
+================
+✔ Automates Kubernetes cluster deployment
+
+✔ Manages cluster upgrades and configurations
+
+✔ Supports AWS, GCE (Google Cloud), and Bare Metal
+
+
+
 Create an EC2 instance or use your personal laptop.
 
 Dependencies required

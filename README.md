@@ -265,21 +265,21 @@ Supports different access types (ClusterIP, NodePort, LoadBalancer).
 
 ![image](https://github.com/user-attachments/assets/e80813be-2e72-4583-b8c9-8ca8ea804304)
 
-1. Installation of minkube
+1. Installation of minikube
    ---------------
 
-1. Install dependies:
+# 1. Install dependies:
 
        sudo apt update && sudo apt upgrade -y
        sudo apt install -y curl wget apt-transport-https conntrack
 
-2. Install minikube:
-   ================
-
+# 2. Install minikube:
+  
        curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
        sudo install minikube-linux-amd64 /usr/local/bin/minikube
-3. Check the version
-   ===================
+       
+# 3. Check the version
+
 
        minikube version
 
@@ -287,8 +287,8 @@ Supports different access types (ClusterIP, NodePort, LoadBalancer).
 Installation of kubectl
 =======================
 
-1. Update the dependies
-    ---------------------
+# 1. Update the dependies
+    
    
         sudo apt update && sudo apt upgrade -y
 # 2. Install kubectl

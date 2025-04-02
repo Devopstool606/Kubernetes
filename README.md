@@ -131,7 +131,7 @@ Minikube provides a command to open the exposed service in a browser:
 Or 
 Get the URL manually 
 
-    minikube service my-nginx --url
+    minikube service my-service --url
 
 Step 5: Cleanup (Optional)
 

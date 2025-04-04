@@ -18,9 +18,9 @@ We’re deploying a simple Nginx web server using a YAML file.
 
 # Step 1: Create the Pod YAML file Pod.yaml
 
-# 💻 Step 2: Deploy the Pod
+# 💻 Step 2: Create the Pod
 
-      kubectl apply -f nginx-pod.yaml
+      kubectl create -f nginx-pod.yaml
 
   This creates a Pod using the public nginx image.
 

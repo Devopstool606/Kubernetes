@@ -86,6 +86,62 @@ Conclusion
 
 ✅ If Minikube stops, your Kubernetes cluster stops. You need to restart Minikube to continue using Kubernetes.
 
+# Kubernetes architecture
+
+![image](https://github.com/user-attachments/assets/665e55a1-8d27-4f51-8642-afe7409651c3)
+
+# Core Components
+
+ A Kubernetes cluster consists of a control plane and one or more worker nodes. Here's a brief overview of the main components:
+
+# Control Plane Components
+
+Manage the overall state of the cluster:
+
+# kube-apiserver
+
+Acts as the interface for managing the cluster and communicates with all components and exposes the Kubernetes HTTP API
+
+# etcd
+
+A key-value store that stores all cluster data, including configuration and state
+
+# kube-scheduler
+
+Assigns pods to Nodes based on resource availability and policies
+
+# kube-controller-manager
+
+Handles background tasks such as maintaining node health, scaling, and other cluster-wide operations
+
+# cloud-controller-manager 
+
+Integrates with underlying cloud provider(s).
+
+# Node Components
+Run on every node, maintaining running pods and providing the Kubernetes runtime environment:
+
+# kubelet
+
+An agent that runs on each node in the cluster. It makes sure that containers are running in a Pod.
+
+The kubelet constantly checks the health and status of pods and containers running on the node.
+
+If a container fails, kubelet can restart it based on its configuration.
+
+It gathers resource utilization data (CPU, memory, etc.) and reports to the control plane, helping in scheduling and scaling decisions.
+
+Kubelet communicates with the container runtime (e.g., Docker, containerd) to start, stop, and manage containers.
+
+# kube-proxy 
+
+Maintains network rules on nodes to implement Services.
+
+# Container runtime
+
+Software responsible for running containers. 
+
+
 Deploy Nginx on Minikube 🚀
 -----------------------------
 Since Minikube is a single-node Kubernetes cluster, let's deploy Nginx and expose it so that we can access it from outside.

@@ -142,7 +142,7 @@ Maintains network rules on nodes to implement Services.
 Software responsible for running containers. 
 
 
-Deploy Nginx on Minikube 🚀
+Deploy Nginx on Minikube without YAML file🚀
 -----------------------------
 Since Minikube is a single-node Kubernetes cluster, let's deploy Nginx and expose it so that we can access it from outside.
 

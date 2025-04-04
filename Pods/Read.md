@@ -93,3 +93,22 @@ kube-system------->	                                                  Core Kuber
 kube-public ------>	                                                  Readable by all users, even unauthenticated
 
 kube-node-lease ------>                                                    Node heartbeats
+
+
+# 🛠️ Namespace Commands
+
+ # 🔹 List all namespaces
+
+     kubectl get namespaces
+
+# 🔹 Create a namespace
+
+     kubectl create namespace my-namespace
+
+# 🔹 Use a namespace temporarily
+  
+    kubectl get pods -n my-namespace
+
+# 🔹 Set a default namespace (in kubeconfig)
+
+    kubectl config set-context --current --namespace=my-namespace

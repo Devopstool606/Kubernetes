@@ -86,7 +86,10 @@ Or, separate workspaces for different teams or environments.
 
 # Namespace	                                                Purpose
 
-default                                                      	Where resources go if no namespace is given
-kube-system	                                                  Core Kubernetes components (DNS, scheduler)
-kube-public	                                                  Readable by all users, even unauthenticated
-kube-node-lease	                                              Node heartbeats
+default---------->                                                      Where resources go if no namespace is given
+
+kube-system------->	                                                  Core Kubernetes components (DNS, scheduler)
+
+kube-public ------>	                                                  Readable by all users, even unauthenticated
+
+kube-node-lease ------>                                                    Node heartbeats

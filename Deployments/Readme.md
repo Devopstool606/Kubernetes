@@ -27,6 +27,11 @@ A Deployment is a Kubernetes object that:
 
     kubectl create deployment nginx-deploy --image=nginx
 
+Note: If you are using your own docker image inside the yml file make sure to load your local image to minikuke docker registry
+
+      minikube image load <image name>
+
+
 # ✅ 3. List all Deployments
 
     kubectl get deployments

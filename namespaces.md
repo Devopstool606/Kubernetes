@@ -47,6 +47,10 @@ Helps manage large clusters by logically grouping related workloads.
     kubectl get pods --namespace=myname-space
 
     kubectl get pods --namespace=my-namespace
+
+# to delete all pods in namespace
+
+     kubectl delete pods --all -n <namespace-name>
     
 This will show only the pods inside the monitoring namespace — like your Prometheus pods.
 

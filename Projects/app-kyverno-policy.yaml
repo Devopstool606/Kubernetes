@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/<your-username>/k8s-kyverno-argocd'
+    repoURL: 'https://github.com/vamshireddy902/k8s-kyverno-argocd'
     targetRevision: HEAD
     path: examples
   destination:

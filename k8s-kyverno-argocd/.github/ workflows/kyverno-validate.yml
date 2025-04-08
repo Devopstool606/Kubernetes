@@ -1,1 +1,26 @@
 
+name: Validate Kyverno Policies
+
+on:
+  push:
+    paths:
+      - 'examples/**/*.yaml'
+  pull_request:
+    paths:
+      - 'examples/**/*.yaml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install kyverno CLI
+        run: |
+          curl -L https://github.com/kyverno/kyverno/releases/latest/download/kyverno-cli_linux_x86_64.tar.gz | tar xz
+          sudo mv kyverno /usr/local/bin/
+
+      - name: Validate Kyverno policy
+        run: |
+          kyverno validate examples/enforce-pod-requests-limits.yaml

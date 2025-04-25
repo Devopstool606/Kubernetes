@@ -424,6 +424,14 @@ Please follow the steps carefully and read each command before executing.
 
     aws s3api create-bucket --bucket kops-abhi-storage --region us-east-1
 
+# when you create a bucket in a non-default region (anything other than us-east-1), you must explicitly set the location constraint in the command
+
+     aws s3api create-bucket \
+    --bucket kops-abhi-storage \
+    --region ap-southeast-1 \
+    --create-bucket-configuration LocationConstraint=ap-southeast-1
+
+
 # Create the cluster
 
     kops create cluster --name=demok8scluster.k8s.local --state=s3://kops-abhi-storage --zones=us-east-1a --node-count=1 --node-size=t2.micro --master-size=t2.micro  -- 
